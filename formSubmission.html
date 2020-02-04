@@ -30,6 +30,8 @@
   </style>
   </head>
   <body>
+    <iframe name="complete" style="display:none;" onload="this.onload=function(){window.location='http://www.google.com'}"></iframe>
+
     <!--<h1>Hello, world!</h1>-->
     <div class="container-fluid">
         <div class="row">
@@ -56,7 +58,7 @@
                     </div>
                     <div class="card-body">
         
-                        <form class="needs-validation" novalidate>
+                        <form target="complete" class="needs-validation" novalidate>
                             <div class="form-row">
                               <div class="col-md-4 mb-3">
                                 <label for="validationCustom01">First name</label>
