@@ -1,0 +1,14 @@
+$(window).on('resize',function() {
+    // do whatever
+});
+$(document).ready(function() {
+    $(window).trigger('resize');
+});
+
+/*
+If you put your code at the bottom of the page to avoid needing $(document).ready, it gets even simpler:
+*/
+
+$(window).on('resize',function() {
+    // do whatever
+}).trigger('resize');
