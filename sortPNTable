@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jan 20 18:16:20 2020
+
+@author: Josh
+"""
+import pandas as pd
+import xlrd
+import xlwt
+
+#df=pd.read_excel(r'C:\path\CLAB_catalog_export-frfr.xlsx')
+df=pd.read_excel(r'C:\path\CLAB_catalog_export-caen.xlsx')
+#path on desktop
+
+
+
+type(df)
+df.replace('^\s+', '', regex=True, inplace=True) #front
+df.replace('\s+$', '', regex=True, inplace=True) #end
+type(df)
+pn=df['PARTNUMBER']
+language=df['LANGUAGE']
+country=df['COUNTRY']
+series=df['SERIES']
+#language[1]
+scope=df['SITE']
+#type(len(df))
+#type(range(len(df)))
+
+
+
+new_row_data=[]
+
+for i in range(len(df)):
+     if 'Public' in scope[i] and (('chro' in series[i]) or ('trav' in series[i])) :
+        #print(scope[i])
+        #print(series[i])
+        print('https://domain/__/'+ str(language[i]) +'/'+ str(country[i]) +'/content/path1/'+str(pn[i]))
+        new_row_data.append('https://domain/__/'+ str(language[i]) +'/'+ str(country[i]) +'/content/path1/'+str(pn[i]))
+     elif 'Professional' in scope[i] and (('chro' in series[i]) or ('trav' in series[i])):
+        #print(scope[i])
+        #print(series[i])
+        print('https://domain/__/'+ str(language[i]) +'/'+ str(country[i]) +'/content/path2/'+str(pn[i]))
+        new_row_data.append('https://domain/__/'+ str(language[i]) +'/'+ str(country[i]) +'/content/path2/'+str(pn[i]))
+        
+ 
+ #domain
+ #__
+ #path1
+ #path2
+        
+#pd.DataFrame(new_row_data).to_excel(r'target-chrome-devices-pn-url-frca.xlsx', sheet_name='Sheet1')       
+pd.DataFrame(new_row_data).to_excel(r'C:\path\caen2.xlsx', sheet_name='Sheet1')
+
+#path on desktop
