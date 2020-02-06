@@ -1,0 +1,13 @@
+/* 001 */
+var str ="word" //
+
+var str = new String("")  //object temp
+var text = str.substring(3)  // has attribute temp
+str=str.vlueOf()  // obj -> back to string
+
+/* in mathmatic operation : obj *5  */
+var obj = {}
+obj *5    //xx
+obj.valueOf = function(){return 5}
+obj*5  //vv   obj's valueOf  has special role in this case
+
