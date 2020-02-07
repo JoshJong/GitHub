@@ -12,3 +12,5 @@ obj.valueOf = function(){return 5}
 obj*5  //vv   obj's valueOf  has special role in this case
 obj.toString = function(){return 7} // toString is the 2nd priority for mathematic operation
 /*1-0030*/
+
+/* every var default : undefined ;  null means someone assigned null to a var.  json only uses null */
