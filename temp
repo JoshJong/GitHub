@@ -44,7 +44,41 @@ Boolean(500) is true
 /*1-0107*/
 
 
+/* arguments*/
+function ff(){
+  var a1=arguments[0];
+  var a2=arguments[1];
+  var a3=arguments[2];
+  var length=arguments.length;
+}
 
+
+/* argument behaves like array, but  
+arguments instanceof Array is false
+[] instanceof Array is true */
+
+/*array foreach */
+/*
+這時候就要來介紹這個高階函數的格式了， forEach 允許把三個參數傳遞進去 callback 裡頭，分別是 item(element) 、 index 、 array（先不討論）。
+//medium.com/@realdennis/array-%E5%8E%9F%E5%9E%8B%E7%9A%84-foreach-%E6%9C%89%E5%A4%9A%E5%A5%BD%E7%94%A8-%E5%AD%B8%E6%9C%83%E9%AB%98%E9%9A%8E%E5%87%BD%E6%95%B8%E4%B9%8B%E5%BE%8C%E9%83%BD%E4%B8%8D%E6%83%B3%E5%AF%AB-javascript-%E4%BB%A5%E5%A4%96%E7%9A%84%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E4%BA%86-dc4b594a045a
+*/
+let oddArr = [], evenArr=[];
+arr.forEach((item,index)=>{
+ if(index%2===0) oddArr.push(item);
+ else evenArr.push(item)
+})
+
+/*arguments to array*/
+var args = new Array();
+...within func...for ( i<arguments.length){ args.push(arguments[i])}...
+/*so we can then use the methods of array, like sort() */
+or
+var args = [].slice.call(arguments);
+var args = [].slice.call([3,5,6,3,1]); // using array
+var args = [].slice.call({'0':1, '1':2, length:2}); //using Obj  attributes name must follow 0,1,2,3.. length is also a must
+
+
+/*1-0134*/
 
 
 
