@@ -14,3 +14,40 @@ obj.toString = function(){return 7} // toString is the 2nd priority for mathemat
 /*1-0030*/
 
 /* every var default : undefined ;  null means someone assigned null to a var.  json only uses null */
+/* type of undefined is undefined,   type of null is not null */
+/* undefined == null yes,   undefined === null no */
+/* ===   will check typeof  in 1st priority */
+/* the purpose of null  is to identify the value was assigned by human or default */
+
+
+/*truthy*/
+500 = true   //false
+if (500) {} else {}
+Boolean(500) is true
+Boolean(" ") is true
+Boolean("") is false
+
+Boolean(500) is true
+!500  means not Boolean(500)  , so it is false
+!!500 means Boolean(500) , so it is true
+!!"" is false
+!!0 is false
+!!null is false
+!!undefined is false
+!!NaN is false
+!![] is true
+!!{} is true
+!!Infinity is true
+/* there's value inside if, it will be transformed to boolean, which means has pysical memory ref, so the result will be true */
+/*minify*/
+
+/*1-0107*/
+
+
+
+
+
+
+
+
+
