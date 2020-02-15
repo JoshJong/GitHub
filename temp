@@ -80,7 +80,16 @@ var args = [].slice.call({'0':1, '1':2, length:2}); //using Obj  attributes name
 
 /*1-0134*/
 
+/**/
+(function(){
+})();
 
+(function(o,n){
+      o.onerror = function(){.....}
+      n.queryselector('body').addEventListener('click', function(){.....})
+})(window,document);   // better for compression
+
+/*1-0156*/
 
 
 
