@@ -180,11 +180,54 @@ switch (true){
 
 /*1-0238*/
 
+/*scope*/
+var a=1;
+(function(a){
+    a=100; <-- doens't change outside a
+    console.log(a);   <-- get a inside a  because.... (as follows)
+})(a)
+console.log(a); <-- 1
+
+(function(var a){   <--  equals to this
+    a=100;
+    console.log(a);   
+})(a)
+console.log(a):
 
 
 
+function B(){
+  console.log(g);
+}
+function A(){
+  var g=99; 
+  B();
+}
+B();  <-- can't run
+A();  <-- can't run
 
 
+function A(){
+  var g=99; 
+  function B(){
+    console.log(g);
+  }
+  B();
+}
+A();  <-- 99
 
 
+/*Closure*/
+var g;
+function outer(){
+   var a=100;
+   function inner(){
+      console.log(a);
+   }
+   g=inner;
+}
+outer(); <- keep the inner to live globally,
+g();<- can get the variable a because of the Closure
+g();<- always can get a
 
+/*1-0301*/
