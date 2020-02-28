@@ -83,13 +83,69 @@ var args = [].slice.call({'0':1, '1':2, length:2}); //using Obj  attributes name
 /**/
 (function(){
 })();
+/*simplify*/
+/*force to run this function with falsy, undefinded to be turned to True*/
+/*also prevent from being anonymous function  1-0158*/
+!function(){
+}()
 
 (function(o,n){
       o.onerror = function(){.....}
       n.queryselector('body').addEventListener('click', function(){.....})
 })(window,document);   // better for compression
 
-/*1-0156*/
+
+/**/
+function run(){
+    try {
+    
+    } catch(e){
+       console.log(e.message);
+    }
+}
+run();
+
+/**/
+function run(){
+    try {  
+    } catch(e){
+       console.log(e.message);
+    } finally{
+        /* this is a must excuted area no matter any errors before, the original purposr is to release resource*/
+    }
+}
+
+function run(){
+    try {  
+       return('abc');
+    }finally{
+       return('xyz');   <- only this one being returned
+    }
+}
+
+function run(){
+    try {  
+       return('abc');
+    }finally{
+        console.log('xyz');   <- print xyz, then return abc
+    }
+}
+/* finally can be used to close DB connection  ... and so on ...*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
