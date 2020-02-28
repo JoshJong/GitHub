@@ -134,13 +134,51 @@ function run(){
 
 
 
+switch(''){
+  case'':
+    break;
+  case'':
+    break;
+  default:
+    console.log();
+}
 
+var n=1;
+switch(n){
+  case 1:
+  case 2:
+  case 3:
+    break;
+  case 4:
+  case 5:
+    break;
+  default:
+    console.log(n);
+}
 
+var a=5;
+funcation aaa(a){return a<15;}
+switch(true){
+  case a<5:
+    break;
+  case a<10:
+    break;
+  case aaa(a):
+    break;
+  default:
+    console.log(a);
+}
 
+switch (true){
+  case true:   <- will only run this one
+    break;
+  case true:
+    break
+  default:
+    console.log();  
+}
 
-
-
-
+/*1-0238*/
 
 
 
