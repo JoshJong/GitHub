@@ -294,3 +294,62 @@ var obj ={
 result(); // get value B
 
 /*2-0014*/
+
+
+var add = (function(){
+    var count=0;
+    return count+=1;
+    
+})()
+add //1
+add //1
+add //1
+
+
+var add = (function(){
+    var count=0;
+    return function(){
+      return count+=1;
+    }
+    
+})()
+add() //1
+add() //2
+add() //3
+/* use iife to initiate , and pass the actual fucntion to var, use clousure to keep count value */
+
+
+/*how to print 5 4 3 2 1*/
+for(var i=1;i<5;i++){console.log(i);} //x
+for(var i=1;i<5;i++){
+  setTimeout(function(){
+      console.log(i);
+  },i*1000)
+}//x
+for(var i=0;i<5;i++){
+    (function(i){  //!!!
+          setTimeout(function(){
+      console.log(i);
+  },i*1000)
+    })(i)   //!!!  closure
+}
+
+for(var i=0;i<5;i++){
+  setTimeout(function(i){
+      console.log(i);
+  },i*1000,i)   // use setTimeout , another kind of closure
+}
+
+for(var i=0;i<5;i++){
+  setTimeout(function(){
+      console.log(this.valueOf());
+  }.bind(i),i*1000,i)  //use bind to update the 'this' obj
+}
+
+for(let i=0;i<5;i++){   // let to make i different in every { }
+  setTimeout(function(){
+      console.log(i);
+  },i*1000)
+}
+
+/*2-0027*/
