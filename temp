@@ -353,3 +353,7 @@ for(let i=0;i<5;i++){   // let to make i different in every { }
 }
 
 /*2-0032*/
+
+
+/*2-0040*/
+currying
