@@ -357,3 +357,34 @@ for(let i=0;i<5;i++){   // let to make i different in every { }
 
 /*2-0040*/
 currying
+  
+function cube(height){
+  return function(width){
+   return function(depth){
+           return height*width*depth;
+   }
+}
+}
+var square = cube(4);   //   square(xx) means  cube(4,xx, undefined)
+var volumn = square(2);   // volumn(xxx) means  cube(4,xx, xxx)
+volumn(1)
+// the key is taht Curry utilize Closure  (para){para}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
