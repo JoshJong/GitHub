@@ -369,7 +369,7 @@ var square = cube(4);   //   square(xx) means  cube(4,xx, undefined)
 var volumn = square(2);   // volumn(xxx) means  cube(4,xx, xxx)
 volumn(1)
 // the key is taht Curry utilize Closure  (para){para}  
-
+/*2-0047*/
 
 
 
