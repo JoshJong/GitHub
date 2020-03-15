@@ -369,7 +369,33 @@ var square = cube(4);   //   square(xx) means  cube(4,xx, undefined)
 var volumn = square(2);   // volumn(xxx) means  cube(4,xx, xxx)
 volumn(1)
 // the key is taht Curry utilize Closure  (para){para}  
-/*2-0047*/
+
+
+//hoisting
+var x =5;
+(function(){
+
+console.log(x);
+var x=10;
+console.log(x);
+})();
+//undefined
+//10
+
+var x =5;
+(function(){
+
+console.log(x);
+x=10;
+console.log(x);
+})();
+//5
+//10
+
+// good habits: 所有宣告都放範圍內最上方
+/*2-0054*/
+
+
 
 
 
