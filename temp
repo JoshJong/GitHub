@@ -395,6 +395,62 @@ console.log(x);
 // good habits: 所有宣告都放範圍內最上方
 /*2-0054*/
 
+/*2-0103*/ 
+//strict
+"use strict" at begging
+
+or  
+
+function xxx(){
+   "use strice"
+   ...................
+}
+
+
+// strict 對this 定義不同
+
+(function(){
+  "use strict"
+  function testfun(){
+     return this;   // strict return "undefined",  一般return window ( it runs under global) 因為testvar是在全域下執行
+  }
+  var testvar=testfun();
+})();
+
+//
+if(){} 內不要建立function
+function在es6不會被hoisting上去   因為已{}為界定範圍
+
+(function(){
+   if(false){
+      function run(){
+        console.log("run");
+      }
+   run();
+   }
+})(); //在es6無法hoisting 上去
+
+(function(){
+   "use strict"
+   if(false){
+      function run(){
+        console.log("run");
+      }
+   run();
+   }
+})();  // under strict mode, 函式不可以在陳述式裡宣告
+
+
+
+
+//strict mode 的arguments[x] 不可傳入後又是後改掉
+/*02-0130*/
+
+
+
+
+
+
 
 
 
