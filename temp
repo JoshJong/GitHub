@@ -444,13 +444,36 @@ function在es6不會被hoisting上去   因為已{}為界定範圍
 
 
 //strict mode 的arguments[x] 不可傳入後又是後改掉
-/*02-0130*/
 
 
+//callee//
+(function(){
+  console.log(Date.now());
+  setTomeout(arguments.callee,1000);
+})()
+
+(function run(){   //iife 也可以assign name , 但範圍屬於function內
+"use strict"
+  console.log(Date.now());
+  setTimeout(run,1000);
+})()
+
+// !!! 1-49-49 !!!//
+
+parseFloat((0.1+0.2).toFixed(15)) === 0.3;
+
+// !!! 2-28-00 !!!//
 
 
+function f(foo, val){
+  with(foo){
+    console.log(val);  // so confusing,  foo 有可能屆時也有val attr
+  }
+}
 
-
+f({});  //undefined
+f({},1)  // 1
+f({val:"val"},1) // val
 
 
 
