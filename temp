@@ -476,6 +476,19 @@ f({},1)  // 1
 f({val:"val"},1) // val
 
 
+(0 =='' ) //true
+(1 =='true') //true
+(2 =='true') //false  , ecmascript says the 1st step is to transfer 'true' to digit, so 2 != 1
+//steps:
+Number("true") //1
+(0=='0') //true
+(false=='false') //false, because 'false' transfer to 0
+(false=='0') //true
+//http://zero.milosz.ca/
+
+
+
+
 
 
 
