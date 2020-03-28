@@ -1,1 +1,11 @@
 
+var a,b;
+//undefined
+if(a=b){
+ console.log('yes');
+}
+// the final check point is a
+
+
+/*3-0010*/
+
