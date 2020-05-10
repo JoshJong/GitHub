@@ -9,3 +9,38 @@ if(a=b){
 
 /*3-0010*/
 
+
+<script src="a.js"></script>
+<script src="b.js"></script>
+//a.js
+//var name="John"
+//b.js
+//var name="Mark"
+//name will be Mark
+// if <script src="a.js" async></script>  name will be John
+// so the suggestion is to not to use Global Variables
+
+var upperCase='ABC';
+(function(){
+   var upperCase ="DEF";
+   
+   (function(){   
+      var upperCase ="GHI";       // GHI
+      console.log(upperCase);
+   })();
+})();   
+
+var upperCase='ABC';
+(function(){
+   var upperCase ="DEF";   <- this variable is hard to be accessed
+   
+   (function(){  
+      var upperCase ="GHI";
+      console.log(window.upperCase);  //ABC
+   })();     
+})();
+
+
+// the variable inside a scope should have_
+
+
