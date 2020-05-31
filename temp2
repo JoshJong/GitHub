@@ -44,3 +44,16 @@ var upperCase='ABC';
 // the variable inside a scope should have_
 
 
+////////////////////////////////
+function myObject(){
+ this.x=100;
+}
+var p = myObject();  //一般function部會去操作this... 這樣只會得到一個全域window的變數x 為100
+
+function MyObject(){
+ this.x=100;
+}
+var p = new MyObject(); //物件習慣以大寫開頭
+/*3-0041*/
+
+
