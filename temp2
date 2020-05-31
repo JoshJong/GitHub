@@ -54,6 +54,9 @@ function MyObject(){
  this.x=100;
 }
 var p = new MyObject(); //物件習慣以大寫開頭
-/*3-0041*/
+/*3-0045*/
+
+
+
 
 
