@@ -57,6 +57,25 @@ var p = new MyObject(); //物件習慣以大寫開頭
 /*3-0045*/
 
 
+function getIndex(index){
+ return index++, index;   // 只會回傳最後一個
+}
+
+//conditional
+//condition ? exprIfTrue : exprIfFalse
+//  condition
+//   值用來做為條件的表達式
+//  exprIfTrue
+//   如果 condition 的值是 truthy (等於或是可轉換為 true) , exprIfTrue  會被執行
+//  exprIfFalse
+//   如果 condition 的值是 falsy (等於或是可轉換為 false) , exprIfFalse  會被執行
+//    falsy 的表達式有 null, NaN, 0, 空字串 ("") 和 undefined
+false ?  3 : 2+5
+//等同於 false ? 3:5    //5
+/*3-0117*/
+
+
+
 
 
 
