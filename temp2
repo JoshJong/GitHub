@@ -100,12 +100,39 @@ window.show = function(){
 function show(){
  console.log(this);
 }
-其實與物件的概念是一樣的 只是window可省略
-/*3-0207*/
+其實與物件方法的概念是一樣的 只是window可省略
 
 
 
 
 
+var obj = new Object();  //constructor
+var obj={}; // compatible with json
+obj.name="John"
+obj.gender='male'
+obj.showName=function(){console.log(this.name)}
+obj.showGender=function(){console.log(this.gender)}
+obj.showName()
+obj.showGender()
+
+//mass production
+function createPerson(name,gender){
+
+ var obj={}; // compatible with json
+
+ obj.name=name
+ obj.gender=gender
+ obj.showName=function(){console.log(this.name)}
+ obj.showGender=function(){console.log(this.gender)}
+ obj.showName()
+ obj.showGender()
+
+ return obj
+}
+var p1 = createPerson('AAA','male')
+var p2 = createPerson('SSS','female')
+p2.showGender()
+p1.showName()
 
 
+/*3-0223*/
