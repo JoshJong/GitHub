@@ -82,4 +82,30 @@ false ?  3 : 2+5
 /*3-0140*/
 
 
+function show(){
+ console.log(this);
+}
+show() // window  or global
+
+var obj={}
+obj.show = show;
+obj.show();  //{show: ƒ}   
+// this 只到誰端看如何'執行'  純function 與 物件方法不一樣
+//方法是物件裡面的function  其this指向物件本身
+
+window.show = function(){
+ console.log(this);
+}
+等同於
+function show(){
+ console.log(this);
+}
+其實與物件的概念是一樣的 只是window可省略
+/*3-0207*/
+
+
+
+
+
+
 
