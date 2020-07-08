@@ -136,3 +136,30 @@ p1.showName()
 
 
 /*3-0223*/
+
+
+//class, prototype
+function MyOBJ(name){
+  var obj = new Object();
+  obj.xxx = name;
+  obj.aaaBBB = function(){}
+  return obj
+}
+var person1= MyObj('Josh');
+var person2= MyObj('JoshJosh');
+//產生不同物件 彼此不共用任何東西  無法知道類別
+//但不等同於以下
+
+
+function MyOBJ(name){
+  this.xxx = name;
+  this.aaaBBB = function(){}
+ // return this
+}
+var person1=  new MyObj('Josh');
+var person2=  new MyObj('JoshJosh');
+//此法語內建物建概念一樣
+//知道類別
+
+
+
