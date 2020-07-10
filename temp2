@@ -161,5 +161,9 @@ var person2=  new MyObj('JoshJosh');
 //此法語內建物建概念一樣
 //知道類別
 
+//物件另外加方法基本上獨立彼此不同 但是
+Array.prototype === array1._proto_
+Array.prototype === array2._proto_
 
+/*4-0012*/
 
