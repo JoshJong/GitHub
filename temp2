@@ -165,5 +165,20 @@ var person2=  new MyObj('JoshJosh');
 Array.prototype === array1._proto_
 Array.prototype === array2._proto_
 
-/*4-0012*/
+Array.prototype === Array._proto_
+//false
+Array的 prototype 是在class建立時自動產生 其包含了__proto__
+function Aaa(){}
+Aaa.prototype
+
+function Foo(){}
+var f1 = new Foo();
+f1.__proto__.constructor === Foo
+__proto__ 即其類別的prototype
+大致上想成 類別>函式>物件
+/*4-0030*/
+
+
+
+
 
