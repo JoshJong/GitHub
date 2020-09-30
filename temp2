@@ -179,6 +179,16 @@ __proto__ 即其類別的prototype
 /*4-0030*/
 
 
-
+Array.prototype.sum =function(){
+xxxxx
+return output
+}
+var array1 = new Array(1,2,3,4,5)
+array1.sum()
+var array2 = new Array(1,2,3,4,5,6,7)
+array2.sum()
+//兩次呼叫都來自於同一個prototype
+//勿寫array1.__proto__.sum  沒有必要 而且沒有用 因為會導引至prototype以至於沒有引數進入
+/*4-0040*/
 
 
